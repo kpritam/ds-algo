@@ -35,6 +35,8 @@ class LinkedList(private var head: Node, private var last: Node):
             else result
         if (head == null) then z else loop(head, fn(z, head))
     
+    def toList: List[Int] = fold[List[Int]](Nil) { (acc, curr) => curr.data :: acc }.reverse
+
     override def toString: String = if (head == null) then "null" else head.toString
 
 object LinkedList:

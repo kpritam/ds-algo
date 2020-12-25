@@ -5,8 +5,6 @@ lazy val root = project
   .settings(
     name := "ds-algo",
     version := "0.1.0",
-
     scalaVersion := scala3Version,
-
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
+    libraryDependencies += "org.scalatest" % "scalatest_3.0.0-M3" % "3.2.3" % Test
   )
